@@ -1,5 +1,5 @@
 ---
-version: 1.0.1
+version: 1.0.2
 slug: silabs_multiprotocol
 name: Silicon Labs Multiprotocol Cube
 description: Zigbee and OpenThread multiprotocol add-on
@@ -10,7 +10,6 @@ arch:
   - aarch64
   - amd64
 homeassistant: 2024.1.0
-gpio: true
 hassio_api: true
 discovery:
   - otbr
@@ -18,9 +17,7 @@ discovery:
 host_ipc: false
 host_network: true
 host_uts: true
-privileged:
-  - IPC_LOCK
-  - NET_ADMIN
+full_access: true
 image: zhozz/{arch}-addon-silabs-multiprotocol-new
 init: false
 options:
